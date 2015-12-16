@@ -1,24 +1,39 @@
 # Dependencies
-markdown:         redcarpet
-pygments:         true
+markdown:         kramdown
 
 # Permalinks
-permalink:        pretty
+permalink: /:year/:month/:day/:title.html
+# relative_permalinks: true
 
 # Setup
-title:            Lanyon
-tagline:          'A Jekyll theme'
-description:      'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://lanyon.getpoole.com
+title:            My Sample Blog
+tagline:          ''
+description:      'Jekyll-powered, Hyde-themed, knitr-ready.'
+baseurl: "/knitr-hyde/" # If you are making a gh-pages project blog, this is
+                        # the name of your project repo, surrounded by /'s
+                        # Set it to just "/" if you are making a user page.
+                        
+                        # That trailing slash is important for proper storage
+                        # of figures gnerated from knitting.
+                        # Adjustmentts are made as needed in liquid code, e.g.:
+                        # {{ site.baseurl }}{{ post.url | remove_first: '/' }}
+                        
+url: "https://homerhanumat.github.io" # the base hostname & protocol for your site
+
+# set limit on number of post to appear on Home page
+homepostlimit: 4
+
+# Disqus comments:
+disqus:           true
+shortname:        homerhanumatknitrhyde
+
+# Social Media
+twitter:          true # add a twitter button to each post
+facebook:         true # add a facebook share button to each post
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
-
-paginate:         5
-
-# Custom vars
-version:          1.0.0
+  name:           'Homer White'
+  url:            https://statistics.rainandrhino.org
 
 github:
-  repo:           https://github.com/poole/lanyon
+  repo:           https://github.com/homerhanumat/knitr-hyde
