@@ -35,10 +35,11 @@ If you don't already have an existing project but want a project-associated site
 
 If you are using R Studio, then you could accomplish this by creating a new project under version control.  The final step of this process clones from your remote site on Github, and you find yourself in the new project on the master branch.  Click on the Git tab and then the More menu, and open a shell.  You will be in the root directory of your project.  Run these commands:
 
-```
+
+{% highlight r %}
 git fetch
 git checkout gh-pages
-```
+{% endhighlight %}
 
 and then exit the shell.  You will now be in the local `gh-pages` branch of your project.  All of your blogging work will be done in this branch.  When you want to do actual project work, switch to the master branch.
 
