@@ -12,6 +12,7 @@ output:
     fig_caption:  true
 ---
 
+
 ## Introduction
 
 The aim of this project is to help students and colleagues who for some reason want to blog on R-related topics.  If you have a particular Git Hub project that deals with R and you want to blog about your work as it develops, or if you simply want to blog about R in general, then you can use the material from my [`knitr-lanyon`](https://github.com/homerhanumat/knitr-lanyon) repository to set up, with minimal fuss, a Jekyll-powered site with good styling borrowed from Mark Otto's [Lanyon project](https://github.com/poole/lanyon).  With help from Yihui Xie's [`servr`](https://github.com/yihui/servr) package and [knitr-jekyll](https://github.com/yihui/knitr-jekyll) code you 'll be able to write your posts in R Markdown, build and preview the site locally, and push to your Git Hub Pages site when you are ready.
@@ -30,7 +31,17 @@ Consult the [Github Pages guide](https://pages.github.com/).  Decide whether you
 
 #### Getting Files for a Project Site
 
-If you don't already have an existing project but want a project-associated site, then fork my [knitr-hyde](https://github.com/homerhanumat/knitr-lanyon) repository from Git Hub, rename it as you wish and then clone it on your own machine.  You can do your project work on the `master` branch and switch to the `gh-pages` branch for blogging.
+If you don't already have an existing project but want a project-associated site, then fork my [knitr-lanyon](https://github.com/homerhanumat/knitr-lanyon) repository from Git Hub, rename it as you wish and then clone it on your own machine.
+
+If you are using R Studio, then you could accomplish this by creating a new project under version control.  The final step of this process clones from your remote site on Github, and you find yourself in the new project on the master branch.  Click on the Git tab and then the More menu, and open a shell.  You will be in the root directory of your project.  Run these commands:
+
+```
+git fetch
+git checkout gh-pages
+```
+
+and then exit the shell.  You will now be in the local `gh-pages` branch of your project.  All of your blogging work will be done in this branch.  When you want to do actual project work, switch to the master branch.
+
 
 If you already have a project repository on Git Hub and want a site associated with it, then simply create a `gh-pages` branch, delete all of the files, download a [zip file](https://github.com/homerhanumat/knitr-lanyon/archive/gh-pages.zip) of my `gh-pages` branch and extract it into your repo while you have your `gh-pages` branch checked out.
 
@@ -38,12 +49,13 @@ If you already have a project repository on Git Hub and want a site associated w
 
 Having created your user respository (`yourgithubusername.github.io` as per the GitHub Pages guide), clone your user repo onto your own machine.  Stay on your `master` branch:  you don't create a `gh-pages` branch for a user site.  Download a [zip file](https://github.com/homerhanumat/knitr-lanyon/archive/gh-pages.zip) of my `gh-pages` branch and extract it into your repo.
 
-## Configuring my Files for Your Use
+## Configuring My Files for Your Use
 
 In the root directory, locate the `_config.yml` file.  Make some choices:
 
 * Change the `title` and `description`.
-* Change the value of `baseurl` as per the commented directions.  Make sure there is a trailing '/' at the end of `baseurl`.  For a site associated with a repository named `myProject` the base url will be set to "/myProject/".  For a user site, it's just "/".  Either way. it begins and ends with a "/"!
+* Change the value of `baseurl` as per the commented directions.  For a site associated with a repository named `myProject`, the base url will be set to "/myProject".  For a user site, it's just "", an empty string.
+* Change the value of `baseurlknitr`.  It should always be the same as `baseurl`, with the addition of '/' at the end.  So for a project site it's "/myProject/" and for a user site it's just "/".
 * Change `url`.  Since you are pushing to Git Hub, it can be `https://yourgithubusername.github.io`.
 * Decide if you would like people to be able to comment on your posts.  If you want this, leave `disqus` at `true` and register at the [Disqus.com](https://disqus.com/).  You will have the opportunity to add Disqus to your site.  Do this.  As part of this process you will be asked to create a *shortname* for your site.  Set `shortname` accordingly.  If you don't want commenting, simply set `disqus` to `false`.
 * Change `twitter` and `facebook` to `false` if you don't want the Tweet and Facebook buttons for your posts.
