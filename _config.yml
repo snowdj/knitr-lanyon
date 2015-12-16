@@ -6,10 +6,10 @@ permalink: /:year/:month/:day/:title.html
 # relative_permalinks: true
 
 # Setup
-title:            My Sample Blog
+title:            My Lanyon Blog
 tagline:          ''
-description:      'Jekyll-powered, Hyde-themed, knitr-ready.'
-baseurl: "/knitr-hyde/" # If you are making a gh-pages project blog, this is
+description:      'Jekyll-powered, Lanyon-themed, knitr-ready.'
+baseurl: "/knitr-lanyon/" # If you are making a gh-pages project blog, this is
                         # the name of your project repo, surrounded by /'s
                         # Set it to just "/" if you are making a user page.
                         
@@ -25,7 +25,7 @@ homepostlimit: 4
 
 # Disqus comments:
 disqus:           true
-shortname:        homerhanumatknitrhyde
+shortname:        homerhanumatgithubioknitrlanyon
 
 # Social Media
 twitter:          true # add a twitter button to each post
@@ -36,4 +36,4 @@ author:
   url:            https://statistics.rainandrhino.org
 
 github:
-  repo:           https://github.com/homerhanumat/knitr-hyde
+  repo:           https://github.com/homerhanumat/knitr-lanyon

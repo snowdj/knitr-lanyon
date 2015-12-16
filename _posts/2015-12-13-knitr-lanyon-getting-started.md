@@ -1,6 +1,6 @@
 ---
 layout:  post
-title: "Getting Started with Knitr-Hyde"
+title: "Getting Started with Knitr-Lanyon"
 comments:  true
 published:  true
 author: "Homer White"
@@ -14,7 +14,7 @@ output:
 
 ## Introduction
 
-The aim of this project is to help students and colleagues who for some reason want to blog on R-related topics.  If you have a particular Git Hub project that deals with R and you want to blog about your work as it develops, or if you simply want to blog about R in general, then you can use the material from my [`knitr-hyde`](https://github.com/homerhanumat/knitr-hyde) repository to set up, with minimal fuss, a Jekyll-powered site with good styling borrowed from Mark Otto's [Hyde project](https://github.com/poole/hyde).  With help from Yihui Xie's [`servr`](https://github.com/yihui/servr) package and [knitr-jekyll](https://github.com/yihui/knitr-jekyll) code you 'll be able to write your posts in R Markdown, build and preview the site locally, and push to your Git Hub Pages site when you are ready.
+The aim of this project is to help students and colleagues who for some reason want to blog on R-related topics.  If you have a particular Git Hub project that deals with R and you want to blog about your work as it develops, or if you simply want to blog about R in general, then you can use the material from my [`knitr-lanyon`](https://github.com/homerhanumat/knitr-lanyon) repository to set up, with minimal fuss, a Jekyll-powered site with good styling borrowed from Mark Otto's [Lanyon project](https://github.com/poole/lanyon).  With help from Yihui Xie's [`servr`](https://github.com/yihui/servr) package and [knitr-jekyll](https://github.com/yihui/knitr-jekyll) code you 'll be able to write your posts in R Markdown, build and preview the site locally, and push to your Git Hub Pages site when you are ready.
 
 I have tried to minimize what you need to know about Jekyll (and web development generally) in order to get going.  You can learn more about Jekyll when it suits you and eventually make thorough-going alterations to my blog-template, but for now I want you to be able to concentrate on getting your content out there to a waiting public.
 
@@ -30,17 +30,17 @@ Consult the [Github Pages guide](https://pages.github.com/).  Decide whether you
 
 #### Getting Files for a Project Site
 
-If you don't already have an existing project but want a project-associated site, then fork my [knitr-hyde](https://github.com/homerhanumat/knitr-hyde) repository from Git Hub, rename it as you wish and then clone it on your own machine.  You can do your project work on the `master` branch and switch to the `gh-pages` branch for blogging.
+If you don't already have an existing project but want a project-associated site, then fork my [knitr-hyde](https://github.com/homerhanumat/knitr-lanyon) repository from Git Hub, rename it as you wish and then clone it on your own machine.  You can do your project work on the `master` branch and switch to the `gh-pages` branch for blogging.
 
-If you already have a project repository on Git Hub and want a site associated with it, then simply create a `gh-pages` branch, delete all of the files, download a [zip file](https://github.com/homerhanumat/knitr-hyde/archive/gh-pages.zip) of my `gh-pages` branch and extract it into your repo while you have your `gh-pages` branch checked out.
+If you already have a project repository on Git Hub and want a site associated with it, then simply create a `gh-pages` branch, delete all of the files, download a [zip file](https://github.com/homerhanumat/knitr-lanyon/archive/gh-pages.zip) of my `gh-pages` branch and extract it into your repo while you have your `gh-pages` branch checked out.
 
 #### Getting Files for a User Site
 
-Having created your user respository (`yourgithubusername.github.io` as per the GitHub Pages guide), clone your user repo onto your own machine.  Stay on your `master` branch:  you don't create a `gh-pages` branch for a user site.  Download a [zip file](https://github.com/homerhanumat/knitr-hyde/archive/gh-pages.zip) of my `gh-pages` branch and extract it into your repo.
+Having created your user respository (`yourgithubusername.github.io` as per the GitHub Pages guide), clone your user repo onto your own machine.  Stay on your `master` branch:  you don't create a `gh-pages` branch for a user site.  Download a [zip file](https://github.com/homerhanumat/knitr-lanyon/archive/gh-pages.zip) of my `gh-pages` branch and extract it into your repo.
 
 ## Configuring my Files for Your Use
 
-In the root directory, locate the `_config.yaml` file.  Make some choices:
+In the root directory, locate the `_config.yml` file.  Make some choices:
 
 * Change the `title` and `description`.
 * Change the value of `baseurl` as per the commented directions.  Make sure there is a trailing '/' at the end of `baseurl`.  For a site associated with a repository named `myProject` the base url will be set to "/myProject/".  For a user site, it's just "/".  Either way. it begins and ends with a "/"!
@@ -139,7 +139,7 @@ server::jekyll(command = 'jekyll _2.4.0_ build')
 
 Make the site entirely your own by erasing my posts.  Delete the unwanted R Markdown sources, and delete their processed Markdown derivatives from the `_posts` folder.
 
-Styling is provided from Mark Otto's excellent Hyde project.  Hyde comes with eight themes, and you can put the sidebar on the right if you like.  Consult the [Hyde project](https://github.com/poole/hyde) README to learn how to make these changes.
+Styling is provided from Mark Otto's excellent Hyde project.  Hyde comes with eight themes, and you can put the sidebar on the right if you like.  Consult the [Lanyon project](https://github.com/poole/lanyon) README to learn how to make these changes.
 
 If you know a bit of CSS then you might want to play around with the  `public/css/custom.css` file.
 
