@@ -132,7 +132,7 @@ servr::jekyll()
 
 If you are using R Studio then the site will show up in the Viewer.  Every time you save a change to your draft post, the site will re-build, so you can preview your change in real time.  That's the genius of Yihui Xie.
 
-The post will be rendered using version 1.9 of the Ruby gem `kramdown`.  Look in my `sample-post` for examples of inline and displayed mathematics.  Otherwise you can write pretty much as you normally do in R Markdown.
+The post will be rendered using the Ruby gem `kramdown`.  Look in my `sample-post` for examples of inline and displayed mathematics.  Otherwise you can write pretty much as you normally do in R Markdown.
 
 When you are happy with your post, commit your changes and push your `gh-pages` branch to Git Hub.  You can view your site online at:
 
